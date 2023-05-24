@@ -3,7 +3,6 @@ import { Signer } from "ethers"
 import { ethers, upgrades } from "hardhat"
 import { time } from "@nomicfoundation/hardhat-network-helpers"
 import { Box } from "../build/typechain/Box"
-import { QuizStatus } from "./helpers/quiz-status"
 import { BoxV2 } from "../build/typechain/BoxV2"
 
 describe("Transparent Proxy", () => {
