@@ -188,7 +188,7 @@ describe.only("SendAll", () => {
     expect(await testTokenContract.balanceOf(await tokenReceiver.getAddress())).to.equal(0)
     expect(await tokenContract2.balanceOf(await tokenOwner.getAddress())).to.equal(etherAmount)
     expect(await tokenContract2.balanceOf(await tokenReceiver.getAddress())).to.equal(0)
-    console.log("here.........")
+
     const sendToken1Tx = await (
       await testTokenContract.connect(tokenOwner).transfer(await tokenReceiver.getAddress(), sendAmountWoContract)
     ).wait()
@@ -211,7 +211,7 @@ describe.only("SendAll", () => {
           await tokenReceiver.getAddress()
         )
     ).wait()
-    console.log("here.........")
+
     expect(await testTokenContract.balanceOf(await tokenReceiver.getAddress())).to.equal(sendAmount.add(sendAmount))
     expect(await tokenContract2.balanceOf(await tokenReceiver.getAddress())).to.equal(sendAmount.add(sendAmount))
 
