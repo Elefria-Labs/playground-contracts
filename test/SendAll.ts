@@ -5,7 +5,7 @@ import { TestToken__factory } from "../build/typechain"
 import { SendAll } from "../build/typechain/SendAll"
 import { TestToken } from "../build/typechain/TestToken"
 
-describe.only("SendAll", () => {
+describe("SendAll", () => {
   let accounts: Signer[]
   let tokenDeployer
   let testTokenContract: TestToken
@@ -172,7 +172,7 @@ describe.only("SendAll", () => {
     expect(await testTokenContract.balanceOf(await tokenOwner.getAddress())).to.equal(etherAmount)
   })
 
-  it.only("Gas cost should be less to send multiple approved tokens via contract", async () => {
+  it("Gas cost should be less to send multiple approved tokens via contract", async () => {
     const tokenOwner = accounts[1]
     const tokenReceiver = accounts[2]
     const spender = sendAllContract.address
