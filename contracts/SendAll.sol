@@ -5,7 +5,6 @@ pragma solidity ^0.8.0;
 // TODO this can be simplified further
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-
 contract SendAll {
     
     function transferTokens(address[] memory tokens, uint[] memory amounts, address to) external payable {

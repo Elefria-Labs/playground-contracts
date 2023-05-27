@@ -9,6 +9,7 @@
     "compile:pks": "ts-node scripts/compile-circuits-plonk.ts",
     "deploy:box": "hardhat deploy:box --network localhost",
     "deploy:boxv2": "hardhat deploy:boxv2 --network localhost",
+    "deploy:token": "hardhat deploy:token --network localhost",
     "test": "hardhat test",
     "test:report-gas": "REPORT_GAS=true hardhat test",
     "test:coverage": "hardhat coverage",
@@ -93,6 +94,7 @@
   "license": "ISC",
   "dependencies": {
     "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@openzeppelin/contracts": "^4.8.3",
     "@openzeppelin/contracts-upgradeable": "^4.8.3",
     "@openzeppelin/hardhat-upgrades": "^1.26.0"
   }
