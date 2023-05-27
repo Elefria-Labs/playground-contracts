@@ -1,3 +1,4 @@
+import chai from "chai"
 import { chainConfig } from "./chain"
 import "@nomiclabs/hardhat-ethers"
 import "@nomiclabs/hardhat-waffle"
@@ -13,6 +14,8 @@ import KEYS from "./private.json"
 import "./tasks/deploy-box"
 import "./tasks/deploy-box-v2"
 import "./tasks/deploy-token"
+// import { solidity } from "ethereum-waffle"
+// chai.use(solidity)
 // dotenvConfig({ path: resolve(__dirname, "./.env") })
 
 function getNetworks(): NetworksUserConfig | undefined {
