@@ -16,7 +16,7 @@ describe("Transparent Proxy", () => {
     // pythagorasContract = await (await quizApp.deploy(managerAddr)).deployed()
   })
 
-  it.only("Deploy proxy and implementation box contract", async () => {
+  it("Deploy proxy and implementation box contract", async () => {
     const Box = await ethers.getContractFactory("Box")
     const box = await upgrades.deployProxy(Box, [42], { initializer: "store" })
     await box.deployed()

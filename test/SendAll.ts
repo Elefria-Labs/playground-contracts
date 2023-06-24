@@ -4,7 +4,7 @@ import { ethers, upgrades } from "hardhat"
 import { SendAll } from "../build/typechain/SendAll"
 import { TestToken } from "../build/typechain/TestToken"
 
-describe.only("SendAll", () => {
+describe("SendAll", () => {
   let accounts: Signer[]
   let tokenDeployer
   let testTokenContract: TestToken
