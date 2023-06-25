@@ -24,11 +24,13 @@ contract SendAll {
         require(tokens.length == amounts.length,"E:params");
         // commented to save gas
         // require(msg.sender != to,"Invalid params");
-        
         uint len = tokens.length;
-        for(uint i; i<len; ++i){
+        for(uint i; i<len;){
             IERC20 token = IERC20(tokens[i]);
             token.transferFrom(msg.sender, to, amounts[i]);
+            unchecked {
+                ++i;
+            }
         }
     }
 }

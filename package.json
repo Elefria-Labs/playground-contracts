@@ -10,6 +10,7 @@
     "deploy:box": "hardhat deploy:box --network localhost",
     "deploy:boxv2": "hardhat deploy:boxv2 --network localhost",
     "deploy:token": "hardhat deploy:token --network localhost",
+    "deploy:sendall": "hardhat deploy:sendall",
     "test": "hardhat test",
     "test:report-gas": "REPORT_GAS=true hardhat test",
     "test:coverage": "hardhat coverage",
