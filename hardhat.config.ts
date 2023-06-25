@@ -14,6 +14,7 @@ import KEYS from "./private.json"
 import "./tasks/deploy-box"
 import "./tasks/deploy-box-v2"
 import "./tasks/deploy-token"
+import "./tasks/deploy-sendall"
 // import { solidity } from "ethereum-waffle"
 // chai.use(solidity)
 // dotenvConfig({ path: resolve(__dirname, "./.env") })
