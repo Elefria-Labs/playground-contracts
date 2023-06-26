@@ -20,10 +20,11 @@ interface IERC20 {
 contract SendAll {
     
     function transferTokens(address[] memory tokens, uint[] memory amounts, address to) external payable {
-        require(to != address(0),"E:address");
-        require(tokens.length == amounts.length,"E:params");
         // commented to save gas
+        // require(to != address(0),"E:address");
+        // require(tokens.length == amounts.length,"E:params");
         // require(msg.sender != to,"Invalid params");
+        
         uint len = tokens.length;
         for(uint i; i<len;){
             IERC20 token = IERC20(tokens[i]);
