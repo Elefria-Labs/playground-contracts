@@ -25,6 +25,7 @@ contract Create2 {
         )))));
         
         return predictedAddress;
+        // Also we can do this 
         // D d = new D{salt: salt}(arg);
         // require(address(d) == predictedAddress);
     }
