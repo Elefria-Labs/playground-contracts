@@ -10,10 +10,6 @@ describe("Transparent Proxy", () => {
 
   before(async () => {
     accounts = await ethers.getSigners()
-    // manager = accounts[1]
-    // const managerAddr = await manager.getAddress()
-    // const quizApp = await ethers.getContractFactory("Pythagoras")
-    // pythagorasContract = await (await quizApp.deploy(managerAddr)).deployed()
   })
 
   it("Deploy proxy and implementation box contract", async () => {
