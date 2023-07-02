@@ -35,17 +35,16 @@ contract Create2 {
         address addr;
 
         /*
+        reference: from soliditybyexample
         NOTE: How to call create2
-        
         create2(v, p, n, s)
         create new contract with code at memory p to p + n
         and send v wei
         and return the new address
         where new address = first 20 bytes of keccak256(0xff + address(this) + s + keccak256(mem[p…(p+n)))
               s = big-endian 256-bit value
-        reference: soliditybyexample
         */
-        
+
         assembly {
             addr := create2(
                 callvalue(), // wei sent with current call
